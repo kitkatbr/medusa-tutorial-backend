@@ -14,9 +14,9 @@ const ProductDetailDefault = ({ onNext, isComplete, data }: StepContentProps) =>
   const createPublishableApiKey = useAdminCreatePublishableApiKey()
   
   const api_key = useMemo(() => keys?.[0]?.id || "", [keys])
-  const backendUrl = process.env.MEDUSA_BACKEND_URL === "/" || process.env.MEDUSA_ADMIN_BACKEND_URL === "/" ? 
+  const backendUrl = process.env.MEDUSA_BACKEND_URL === "/" || process.env.MEDUSA_ADMIN_BACKEND_URL === "https://medusa-starter-default-production-e7a4.up.railway.app" ? 
     location.origin :
-    process.env.MEDUSA_BACKEND_URL || process.env.MEDUSA_ADMIN_BACKEND_URL || "https://localhost:9000"
+    process.env.MEDUSA_BACKEND_URL || process.env.MEDUSA_ADMIN_BACKEND_URL || "https://medusa-starter-default-production-e7a4.up.railway.app"
 
   useEffect(() => {
     if (!isLoading && !keys?.length) {
