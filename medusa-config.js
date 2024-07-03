@@ -37,6 +37,8 @@ const DATABASE_URL =
 
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
+
+
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
@@ -124,18 +126,18 @@ const plugins = [
 ];
 
 const modules = {
-  eventBus: {
+  /*eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
-      redisUrl: REDIS_URL,
-    },
+      redisUrl: REDIS_URL
+    }
   },
   cacheService: {
     resolve: "@medusajs/cache-redis",
     options: {
-      redisUrl: REDIS_URL,
-    },
-  },
+      redisUrl: REDIS_URL
+    }
+  },*/
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
